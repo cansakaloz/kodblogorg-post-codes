@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace _20201220_aspnetcore_giris
@@ -12,7 +13,8 @@ namespace _20201220_aspnetcore_giris
     {
         public int Id { get; set; }
         public string Name { get; set; }
-    }
+
+        public List<Post> Posts { get; set; }
 
     public class Post
     {
