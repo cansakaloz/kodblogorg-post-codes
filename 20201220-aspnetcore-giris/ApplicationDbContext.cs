@@ -5,6 +5,9 @@ namespace _20201220_aspnetcore_giris
 {
     public class ApplicationDbContext : DbContext
     {
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseNpgsql("Host=localhost;Username=ozcan;Password=okasal01;Database=asptutorial");
     }
